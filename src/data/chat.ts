@@ -15,18 +15,18 @@ export interface UserTypes {
 }
 let favourites: Array<UserTypes> = [
   {
-    ...contacts[1],
+    ...contacts[0],
     meta: {
       // unRead: 3,
       status: STATUS_TYPES.ACTIVE,
     },
   },
-  // {
-  //   ...contacts[5],
-  //   meta: {
-  //     status: STATUS_TYPES.ACTIVE,
-  //   },
-  // },
+  {
+    ...contacts[1],
+    meta: {
+      status: STATUS_TYPES.ACTIVE,
+    },
+  },
   // {
   //   ...contacts[6],
   // },
@@ -40,11 +40,11 @@ let favourites: Array<UserTypes> = [
 
 let directMessages: Array<UserTypes> = [
   {
+    ...contacts[0],
+  },
+  {
     ...contacts[1],
   },
-  // {
-  //   ...contacts[17],
-  // },
   // {
   //   ...contacts[8],
   //   meta: {

@@ -630,7 +630,7 @@ const fakeBackend = () => {
     let updatedUserC: any;
     let resText: any;
     const { params } = config;
-    console.log("conversations", conversations);
+    
     if (params && params.id && conversations.length !== 0) {
       let modifiedC = [...conversations];
       const conversationIdx = (modifiedC || []).findIndex(
@@ -660,6 +660,7 @@ const fakeBackend = () => {
         // get the text from the last message
         const text = lastMessage.text;
         console.log("lastMessage", text);
+        console.log("conversations", conversations[conversationIdx]);
         // call post api to call aws lambda with text
         let body = {
           "message" : text,
@@ -667,7 +668,8 @@ const fakeBackend = () => {
           "channelId": "1234",
           "username": "asdsadsd",
           "engine": "text-davinci-003",
-          "conversations": conversations
+          "engineType": "default",
+          "conversations": conversations[conversationIdx]
         }
 
         resText =  await axios.post('https://dslxhk5x04.execute-api.ap-south-1.amazonaws.com/dev/create', body)

@@ -286,7 +286,7 @@ const Message = ({
   isChannel,
   onDeleteImage,
 }: MessageProps) => {
-  console.log("chatUserDetails", chatUserDetails);
+  console.log("message", message);
   const { userProfile } = useProfile();
   const hasImages = message.image && message.image.length;
   const hasAttachments = message.attachments && message.attachments.length;
