@@ -117,13 +117,13 @@ const Index = ({
         }}
       >
         <div className="row g-0 align-items-center">
-          <div className="col-auto">
+          {/* <div className="col-auto">
             <StartButtons
               onToggle={onToggle}
               text={text}
               onChange={onChangeText}
             />
-          </div>
+          </div> */}
           <div className="col">
             <InputSection value={text} onChange={onChangeText} />
           </div>
