@@ -257,7 +257,7 @@ const Attachments = ({ attachments }: AttachmentsProps) => {
 const Typing = () => {
   return (
     <p className="mb-0">
-      typing
+      
       <span className="animate-typing">
         <span className="dot mx-1"></span>
         <span className="dot me-1"></span>
@@ -275,6 +275,7 @@ interface MessageProps {
   onOpenForward: (message: MessagesTypes) => void;
   isChannel: boolean;
   onDeleteImage: (messageId: string | number, imageId: string | number) => void;
+  isWriting: boolean;
 }
 const Message = ({
   message,
@@ -285,8 +286,9 @@ const Message = ({
   onOpenForward,
   isChannel,
   onDeleteImage,
+  isWriting,
 }: MessageProps) => {
-  console.log("message", message);
+  // console.log("message", message);
   const { userProfile } = useProfile();
   const hasImages = message.image && message.image.length;
   const hasAttachments = message.attachments && message.attachments.length;
@@ -317,6 +319,7 @@ const Message = ({
     ? `${message.meta.userData.firstName} ${message.meta.userData.lastName}`
     : "-";
   const fullName = isChannel ? channdelSenderFullname : chatUserFullName;
+  // console.log("isSent", isSent, "isReceived", isReceived, "isRead", isRead, "isForwarded", isForwarded, "hasText", hasText, "isFromMe", isFromMe, "isChannel", isChannel, "isTyping", isTyping, "isWriting", isWriting,);
   const onDeleteMessage = () => {
     onDelete(message.mId);
   };
@@ -396,12 +399,22 @@ const Message = ({
                     />
                   )}
 
-                  {hasText && (
+                  {hasText && isFromMe && (
                      <p className="mb-0 ctext-content">{message.text}</p>
                   )}
 
                   {/* typing start */}
-                  {isTyping && <Typing />}
+                  {!isFromMe ? <p className="mb-0 ctext-content">
+                      {message.text} 
+                      </p>
+                  : isWriting && (
+                    <p className="mb-0 ctext-content">
+
+<Typing />  
+                    </p>
+                    
+                  )
+                  }
 
                   {/* typing end */}
                   {/* files message start */}

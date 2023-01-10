@@ -81,11 +81,22 @@ const engines = [
     presence_penalty: 0.6,
     stop: ["You:"],
   },
+  {
+    model: "text-davinci-003",
+    type: "default",
+    prompt: "",
+    temperature: 0,
+    max_tokens: 2048,
+    stop: ["You:"],
+  },
 ];
 
 // function to create the message from conversations
 const createMessageFromConversations = conversations => {
   // extract the messages text from the conversation object and join them into a single string
+  // only include last 3 messages from the conversation array
+  conversations.messages = conversations.messages.slice(-3);
+
   return conversations.messages.map(message => message.text).join("/n");
 };
 
@@ -138,7 +149,17 @@ exports.handler = async event => {
       break;
     case "movieEmoji":
       params = engines[5];
-      params.prompt = "Convert movie titles into emoji" + messages;
+      // check if the message is not greater than 50 characters only then add text to message
+      if (message.length <= 50) {
+        params.prompt = "Convert movie titles into emoji:" + messages;
+      } else {
+        params.prompt = messages;
+      }
+
+      break;
+    case "default":
+      params = engines[6];
+      params.prompt = messages;
       break;
     default:
       console.error(`Invalid engine type: ${engineType}`);
@@ -166,7 +187,9 @@ exports.handler = async event => {
     if (responseText === "") {
       return {
         statusCode: 200,
-        body: JSON.stringify("No response from OpenAI"),
+        body: JSON.stringify(
+          "I could not understand your question or there is some error. Please try again."
+        ),
         headers: {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Credentials": true,

@@ -35,10 +35,31 @@ export interface ContactTypes {
 let contacts: ContactTypes[] =
  [
   {
-    id: "text-davinci-003",
-    firstName: "text-davinci-003",
+    id: "qa",
+    firstName: "Q&A",
     lastName: "",
-    about: "Most capable GPT-3 model. Can do any task the other models can do, often with higher quality, longer output and better instruction-following. Also supports inserting completions within text.",
+    about: "Using text-davinci-003, most capable GPT-3 model. Can do any task the other models can do, often with higher quality, longer output and better instruction-following. Also supports inserting completions within text.",
+    email: "4,000 tokens",
+    location: "Up to Jun 2021",
+    status: STATUS_TYPES.ACTIVE,
+    channels: [],
+    media: {
+      total: 0,
+      list: [
+        
+      ],
+    },
+    attachedFiles: {
+      total: 0,
+      list: [
+      ],
+    },
+  },
+  {
+    id: "translate",
+    firstName: "Translate",
+    lastName: "",
+    about: "Using text-davinci-003, most capable GPT-3 model. Can do any task the other models can do, often with higher quality, longer output and better instruction-following. Also supports inserting completions within text.",
     email: "4,000 tokens",
     location: "Up to Jun 2021",
     status: STATUS_TYPES.ACTIVE,
@@ -57,8 +78,50 @@ let contacts: ContactTypes[] =
   },
 
   {
-    id: "code-davinci-002",
-    firstName: "code-davinci-002",
+    id: "code",
+    firstName: "Code Assistant",
+    lastName: "",
+    about: "Using code-davinci-003, most capable GPT-3 model. Can do any task the other models can do, often with higher quality, longer output and better instruction-following. Also supports inserting completions within text.",
+    email: "4,000 tokens",
+    location: "Up to Jun 2021",
+    status: STATUS_TYPES.ACTIVE,
+    channels: [],
+    media: {
+      total: 0,
+      list: [
+        
+      ],
+    },
+    attachedFiles: {
+      total: 0,
+      list: [
+      ],
+    },
+  },
+{
+    id: "explainCode",
+    firstName: "Explain Code",
+    lastName: "",
+    about: "Using code-davinci-003, most capable GPT-3 model. Can do any task the other models can do, often with higher quality, longer output and better instruction-following. Also supports inserting completions within text.",
+    email: "4,000 tokens",
+    location: "Up to Jun 2021",
+    status: STATUS_TYPES.ACTIVE,
+    channels: [],
+    media: {
+      total: 0,
+      list: [
+        
+      ],
+    },
+    attachedFiles: {
+      total: 0,
+      list: [
+      ],
+    },
+  },
+  {
+    id: "chat",
+    firstName: "ChatBot",
     lastName: "",
     about: "Most capable Codex model. Particularly good at translating natural language to code. In addition to completing code, also supports inserting completions within code.",
     email: "8,000 tokens",
@@ -77,46 +140,23 @@ let contacts: ContactTypes[] =
       ],
     },
   },
-
   {
-    id: "614ecab4ac946a9bdafa4e3b",
-    isFavourite: true,
-    firstName: "Marguerite",
-    lastName: "Campbell",
-    profileImage: avatar4,
-    about: "If several languages coalesce, the grammar of the resulting.",
-    email: "Marguerite@Campbell.com",
-    location: "California, USA",
+    id: "movieEmoji",
+    firstName: "Movie Emoji",
+    lastName: "",
+    about: "Most capable Codex model. Particularly good at translating natural language to code. In addition to completing code, also supports inserting completions within code.",
+    email: "8,000 tokens",
+    location: "Up to Jun 2021",
     status: STATUS_TYPES.ACTIVE,
-    channels: [
-      {
-        id: "61665bcb9a456823e282afa7",
-        name: "Landing Design",
-      },
-    ],
+    channels: [],
     media: {
-      total: 17,
+      total: 0,
       list: [
-        {
-          id: 1,
-          url: img1,
-        },
-        {
-          id: 2,
-          url: img2,
-        },
-        {
-          id: 3,
-          url: img3,
-        },
-        {
-          id: 4,
-          url: img4,
-        },
+        
       ],
     },
     attachedFiles: {
-      total: 4,
+      total: 0,
       list: [
       ],
     },

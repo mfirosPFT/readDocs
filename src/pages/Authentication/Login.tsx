@@ -77,7 +77,7 @@ const Login = (props: LoginProps) => {
   );
 
   const defaultValues: any = {
-    email: "admin@themesbrand.com",
+    email: "lazyfiros@gmail.com",
     password: "123456",
   };
 

@@ -584,9 +584,10 @@ const fakeBackend = () => {
           modifiedC[conversationIdx].messages = (
             modifiedC[conversationIdx].messages || []
           ).map((c: any) => {
+            console.log(c);
             return {
               ...c,
-              meta: { ...c.meta, read: true },
+              meta: { ...c.meta, read: true, recevied: !c.meta.recevied },
             };
           });
         }
@@ -605,23 +606,7 @@ const fakeBackend = () => {
       }
     });
   });
-  let fetchRes = async () => {
-    let body = {
-      "message" : "who are you?",
-      "userId": "Is there life beyod earth?",
-      "channelId": "1234",
-      "username": "asdsadsd",
-      "engine": "text-davinci-003"
-    }
-    await axios.post('https://dslxhk5x04.execute-api.ap-south-1.amazonaws.com/dev/create', body)
-    .then(res => {
-      console.log(res)
-      return res
-    })
-    .catch(err => {
-      console.log(err)
-    })
-  }
+
 
 
 
@@ -657,6 +642,9 @@ const fakeBackend = () => {
         
         // find the latest message from sender by checking the meta.receiver in the last message
         const lastMessage = modifiedC[conversationIdx].messages[modifiedC[conversationIdx].messages.length - 1];
+        // get receiver id from the last message
+        const receiverId = lastMessage.meta.receiver;
+        console.log("receiverId", receiverId);
         // get the text from the last message
         const text = lastMessage.text;
         console.log("lastMessage", text);
@@ -667,8 +655,7 @@ const fakeBackend = () => {
           "userId": "Is there life beyod earth?",
           "channelId": "1234",
           "username": "asdsadsd",
-          "engine": "text-davinci-003",
-          "engineType": "default",
+          "engineType": receiverId,
           "conversations": conversations[conversationIdx]
         }
 

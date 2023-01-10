@@ -126,6 +126,11 @@ const Conversation = ({
       >
         {(messages || []).map((message: MessagesTypes, key: number) => {
           const isFromMe = message.meta.sender + "" === userProfile.uid + "";
+          let loading = false;
+          // if isfromme is true then it is sent by me, and if its the last message then same message but with isFromMe false will be added to show the typing indicator
+          if (isFromMe && key === messages.length - 1) {
+            loading = true;
+          }
           return (
             <Message
               message={message}
@@ -136,6 +141,7 @@ const Conversation = ({
               isFromMe={isFromMe}
               onOpenForward={onOpenForward}
               isChannel={isChannel}
+              isWriting= {loading}
               onDeleteImage={onDeleteImage}
             />
           );

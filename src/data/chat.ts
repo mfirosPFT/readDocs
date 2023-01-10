@@ -45,6 +45,18 @@ let directMessages: Array<UserTypes> = [
   {
     ...contacts[1],
   },
+  {
+    ...contacts[2],
+  },
+  {
+    ...contacts[3],
+  },
+  {
+    ...contacts[4],
+  },
+  {
+    ...contacts[5],
+  },
   // {
   //   ...contacts[8],
   //   meta: {

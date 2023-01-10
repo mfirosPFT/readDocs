@@ -200,15 +200,15 @@ const Index = (props: IndexProps) => {
             <div className="flex-grow-1">
               <h4 className="mb-4">Chats</h4>
             </div>
-            <div className="flex-shrink-0">
+            {/* <div className="flex-shrink-0">
               <div id="add-contact">
-                {/* Button trigger modal */}
+                
                 <AddButton onClick={openModal} />
               </div>
               <UncontrolledTooltip target="add-contact" placement="bottom">
                 Add Contact
               </UncontrolledTooltip>
-            </div>
+            </div> */}
           </div>
           <Form>
             <div className="input-group mb-3">
@@ -235,11 +235,11 @@ const Index = (props: IndexProps) => {
           {active === CHATS_TABS.DEFAULT && (
             <>
               {/* favourite */}
-              <Favourites
+              {/* <Favourites
                 users={favourites}
                 selectedChat={selectedChat}
                 onSelectChat={onSelectChat}
-              />
+              /> */}
 
               {/* direct messages */}
               <DirectMessages
@@ -257,18 +257,18 @@ const Index = (props: IndexProps) => {
                 onSelectChat={onSelectChat}
               />
               <h5 className="text-center mb-2">
-                <Link
+                {/* <Link
                   to="#"
                   className="mb-3 px-4 mt-4 font-size-11 text-primary"
                   onClick={() => onChangeTab(CHATS_TABS.ARCHIVE)}
                 >
                   Archived Contacts{" "}
                   <i className="bx bxs-archive-in align-middle" />
-                </Link>
+                </Link> */}
               </h5>
             </>
           )}
-          {active === CHATS_TABS.ARCHIVE && (
+          {/* {active === CHATS_TABS.ARCHIVE && (
             <>
               <Archive
                 archiveContacts={archiveContacts}
@@ -285,7 +285,7 @@ const Index = (props: IndexProps) => {
                 </Link>
               </h5>
             </>
-          )}
+          )} */}
 
           {/* End chat-message-list */}
         </AppSimpleBar>

@@ -1,4 +1,4 @@
-import avatar1 from "../assets/images/users/avatar-1.jpg";
+import avatar1 from "../assets/images/users/126644.gif";
 import img4 from "../assets/images/small/img-4.jpg";
 import { DISPLAY_TYPES, STATUS_TYPES } from "../constants";
 
@@ -42,12 +42,12 @@ export interface SettingsTypes {
 
 let settings: SettingsTypes = {
   basicDetails: {
-    firstName: "Kathryn",
-    lastName: "Swarey",
+    firstName: "Firos",
+    lastName: "M",
     profile: avatar1,
     coverImage: img4,
-    email: "adc@123.com",
-    location: "California, USA",
+    email: "lazyfiros@gmail.com",
+    location: "India, Hyderabad",
   },
   theme: {
     // color: "bgcolor-radio1",

@@ -1,5 +1,5 @@
 import image4 from "../assets/images/small/img-4.jpg";
-import avatar1 from "../assets/images/users/avatar-1.jpg";
+import avatar1 from "../assets/images/users/126644.gif";
 import img1 from "../assets/images/small/img-1.jpg";
 import img2 from "../assets/images/small/img-2.jpg";
 import img4 from "../assets/images/small/img-4.jpg";
@@ -45,36 +45,36 @@ export interface ProfileDetailsTypes {
 
 const profileDetails: ProfileDetailsTypes = {
   basicDetails: {
-    firstName: "Kathryn",
-    lastName: "Swarey",
-    title: "Front end Developer",
+    firstName: "Firos",
+    lastName: "M",
+    title: "Solution Architect",
     description:
       "If several languages coalesce, the grammar of the resulting language is more simple.",
-    fullName: "Kathryn Swarey",
-    email: "admin@themesbrand.com",
-    location: "California, USA",
+    fullName: "Firos M",
+    email: "lazyfiros@gmail.com",
+    location: "Hyderabad, India",
     avatar: avatar1,
     coverImage: image4,
   },
   media: {
     total: 17,
     list: [
-      {
-        id: 1,
-        url: img1,
-      },
-      {
-        id: 2,
-        url: img2,
-      },
-      {
-        id: 3,
-        url: img4,
-      },
-      {
-        id: 4,
-        url: img1,
-      },
+      // {
+      //   id: 1,
+      //   url: img1,
+      // },
+      // {
+      //   id: 2,
+      //   url: img2,
+      // },
+      // {
+      //   id: 3,
+      //   url: img4,
+      // },
+      // {
+      //   id: 4,
+      //   url: img1,
+      // },
     ],
   },
   attachedFiles: {

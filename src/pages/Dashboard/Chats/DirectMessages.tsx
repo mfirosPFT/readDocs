@@ -30,18 +30,18 @@ const DirectMessages = ({
       <div className="d-flex align-items-center px-4 mt-5 mb-2">
         <div className="flex-grow-1">
           <h4 className="mb-0 font-size-11 text-muted text-uppercase">
-            Direct Messages
+            AI Models
           </h4>
         </div>
-        <div className="flex-shrink-0">
+        {/* <div className="flex-shrink-0">
           <div id="new-message" title="New Message">
-            {/* Button trigger modal */}
-            <AddButton onClick={openAddContact} /> {/* contactModal */}
+          
+            <AddButton onClick={openAddContact} /> 
           </div>
           <UncontrolledTooltip target="new-message" placement="bottom">
             New Message
           </UncontrolledTooltip>
-        </div>
+        </div> */}
       </div>
 
       <div className="chat-message-list">

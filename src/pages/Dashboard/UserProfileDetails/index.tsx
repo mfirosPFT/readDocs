@@ -116,30 +116,31 @@ const Index = ({ isChannel }: IndexProps) => {
           <AppSimpleBar className="p-4 user-profile-desc">
             {" "}
             {/* simplebar */}
-            <Actions
+            {/* <Actions
               chatUserDetails={chatUserDetails}
               onOpenVideo={onOpenVideo}
               onOpenAudio={onOpenAudio}
               onToggleFavourite={onToggleFavourite}
               onToggleArchive={onToggleArchive}
-            />
+            /> */}
             <Status about={chatUserDetails.about} />
             {!isChannel ? (
               <>
+              <hr className="my-4" />
                 <BasicDetails chatUserDetails={chatUserDetails} />
                 <hr className="my-4" />
-                <Groups chatUserDetails={chatUserDetails} />
-                <hr className="my-4" />
+                {/* <Groups chatUserDetails={chatUserDetails} /> */}
+                {/* <hr className="my-4" /> */}
               </>
             ) : (
               <>
-                <Members chatUserDetails={chatUserDetails} />
-                <hr className="my-4" />
+                {/* <Members chatUserDetails={chatUserDetails} />
+                <hr className="my-4" /> */}
               </>
             )}
-            <Media media={chatUserDetails.media} limit={3} />
-            <hr className="my-4" />
-            <AttachedFiles attachedFiles={chatUserDetails.attachedFiles} />
+            {/* <Media media={chatUserDetails.media} limit={3} /> */}
+            {/* <hr className="my-4" /> */}
+            {/* <AttachedFiles attachedFiles={chatUserDetails.attachedFiles} /> */}
           </AppSimpleBar>
           {/* <!-- end user-profile-desc --> */}
           {isOpenAudioModal && (

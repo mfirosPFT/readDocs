@@ -363,11 +363,11 @@ const UserHead = ({
         </Col>
         <Col sm={8} className="col-4">
           <ul className="list-inline user-chat-nav text-end mb-0">
-            <li className="list-inline-item">
+            {/* <li className="list-inline-item">
               <Search />
-            </li>
+            </li> */}
 
-            {!isChannel && (
+            {/* {!isChannel && (
               <>
                 <li className="list-inline-item d-none d-lg-inline-block me-2 ms-0">
                   <Button
@@ -391,7 +391,7 @@ const UserHead = ({
                   </Button>
                 </li>
               </>
-            )}
+            )} */}
 
             <li className="list-inline-item d-none d-lg-inline-block me-2 ms-0">
               <button
@@ -403,7 +403,7 @@ const UserHead = ({
               </button>
             </li>
 
-            <li className="list-inline-item">
+            {/* <li className="list-inline-item">
               <More
                 onOpenAudio={onOpenAudio}
                 onOpenVideo={onOpenVideo}
@@ -411,7 +411,7 @@ const UserHead = ({
                 isArchive={chatUserDetails.isArchived}
                 onToggleArchive={onToggleArchive}
               />
-            </li>
+            </li> */}
           </ul>
         </Col>
       </Row>

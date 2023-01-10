@@ -63,7 +63,7 @@ const ProfileUser = ({
                   <i className="bx bx-left-arrow-alt"></i>
                 </Button>
               </div>
-              <div className="flex-shrink-0">
+              {/* <div className="flex-shrink-0">
                 <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                   <DropdownToggle
                     color="none"
@@ -113,7 +113,7 @@ const ProfileUser = ({
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="mt-auto p-3">

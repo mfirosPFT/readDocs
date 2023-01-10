@@ -14,26 +14,26 @@ const BasicDetails = ({ chatUserDetails }: BasicDetailsProps) => {
       <div>
         <div className="d-flex align-items-end">
           <div className="flex-grow-1">
-            <p className="text-muted font-size-14 mb-1">Name</p>
+            <p className="text-muted font-size-14 mb-1">Model Name</p>
           </div>
-          <div className="flex-shrink-0">
+          {/* <div className="flex-shrink-0">
             <button type="button" className="btn btn-sm btn-soft-primary">
               Edit
             </button>
-          </div>
+          </div> */}
         </div>
         <h5 className="font-size-14">{fullName}</h5>
       </div>
 
       <div className="mt-4">
-        <p className="text-muted font-size-14 mb-1">Email</p>
+        <p className="text-muted font-size-14 mb-1">Max Request</p>
         <h5 className="font-size-14">
           {chatUserDetails.email ? chatUserDetails.email : "-"}
         </h5>
       </div>
 
       <div className="mt-4">
-        <p className="text-muted font-size-14 mb-1">Location</p>
+        <p className="text-muted font-size-14 mb-1">Training Data</p>
         <h5 className="font-size-14 mb-0">
           {chatUserDetails.location ? chatUserDetails.location : "-"}
         </h5>

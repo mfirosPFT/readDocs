@@ -25,7 +25,7 @@ const Chanels = ({
       <div className="d-flex align-items-center px-4 mt-5 mb-2">
         <div className="flex-grow-1">
           <h4 className="mb-0 font-size-11 text-muted text-uppercase">
-            Channels
+            Saved Chats
           </h4>
         </div>
         <div className="flex-shrink-0">

@@ -15,8 +15,15 @@ const Welcome = () => {
               </div>
               <h4>Welcome to ChatGPT Enhanced</h4>
               <p className="text-muted mb-4">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. cum sociis natoque penatibus et
+              ChatGPT is a natural language processing-based AI chatbot developed by Microsoft. It uses Generative Pre-trained Transformer (GPT-2) technology to have intelligent, meaningful conversations with users in multiple languages. It can answer questions, give advice, and even ask its own questions based on the user’s responses.
+
+Features: 
+- Natural language processing-based
+- Multi-lingual
+- Easily customizable with additional scripts
+- Generates realistic answers and conversation threads
+- Understands and interprets context from previous messages
+- Automatically generates appropriate questions
               </p>
               <Button type="button" className="btn btn-primary w-lg">
                 Get Started
