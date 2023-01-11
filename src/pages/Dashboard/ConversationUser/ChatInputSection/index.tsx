@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Alert, Form } from "reactstrap";
 
 // components
-import StartButtons from "./StartButtons";
+// import StartButtons from "./StartButtons";
 import InputSection from "./InputSection";
 import EndButtons from "./EndButtons";
 import MoreMenu from "./MoreMenu";

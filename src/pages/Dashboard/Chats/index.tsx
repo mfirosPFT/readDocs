@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import { Button, Form, UncontrolledTooltip } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Button, Form } from "reactstrap";
+// import {UncontrolledTooltip } from "reactstrap";
+// import { Link } from "react-router-dom";
 // hooks
 import { useRedux } from "../../../hooks/index";
 
@@ -29,13 +30,13 @@ import { CreateChannelPostData } from "../../../redux/actions";
 import AppSimpleBar from "../../../components/AppSimpleBar";
 import AddGroupModal from "../../../components/AddGroupModal";
 import InviteContactModal from "../../../components/InviteContactModal";
-import AddButton from "../../../components/AddButton";
+// import AddButton from "../../../components/AddButton";
 import ContactModal from "../../../components/ContactModal";
 
-import Favourites from "./Favourites";
+// import Favourites from "./Favourites";
 import DirectMessages from "./DirectMessages";
 import Chanels from "./Chanels";
-import Archive from "./Archive";
+// import Archive from "./Archive";
 import { CHATS_TABS } from "../../../constants";
 
 interface IndexProps {}
@@ -45,26 +46,26 @@ const Index = (props: IndexProps) => {
 
   const {
     isContactInvited,
-    favourites,
+    // favourites,
     directMessages,
     channels,
     isContactsAdded,
     isChannelCreated,
     selectedChat,
     isFavouriteContactToggled,
-    archiveContacts,
+    // archiveContacts,
     isContactArchiveToggled,
     chatUserDetails,
   } = useAppSelector(state => ({
     isContactInvited: state.Contacts.isContactInvited,
-    favourites: state.Chats.favourites,
+    // favourites: state.Chats.favourites,
     directMessages: state.Chats.directMessages,
     channels: state.Chats.channels,
     isContactsAdded: state.Chats.isContactsAdded,
     isChannelCreated: state.Chats.isChannelCreated,
     selectedChat: state.Chats.selectedChat,
     isFavouriteContactToggled: state.Chats.isFavouriteContactToggled,
-    archiveContacts: state.Chats.archiveContacts,
+    // archiveContacts: state.Chats.archiveContacts,
     isContactArchiveToggled: state.Chats.isContactArchiveToggled,
     chatUserDetails: state.Chats.chatUserDetails,
   }));
@@ -88,9 +89,9 @@ const Index = (props: IndexProps) => {
   invite contact modal handeling
   */
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const openModal = () => {
-    setIsOpen(true);
-  };
+  // const openModal = () => {
+  //   setIsOpen(true);
+  // };
   const closeModal = () => {
     setIsOpen(false);
   };
@@ -172,9 +173,9 @@ const Index = (props: IndexProps) => {
   tab handeling
   */
   const [active, setActive] = useState(CHATS_TABS.DEFAULT);
-  const onChangeTab = (tab: CHATS_TABS) => {
-    setActive(tab);
-  };
+  // const onChangeTab = (tab: CHATS_TABS) => {
+  //   setActive(tab);
+  // };
 
   /*
   archive contacts

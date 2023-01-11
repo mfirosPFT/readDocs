@@ -1,3 +1,4 @@
+import { is } from "date-fns/locale";
 import React from "react";
 
 // interface
@@ -12,7 +13,7 @@ interface RepliedMessageProps {
   fullName: string;
 }
 function RepliedMessage({ isFromMe, message, fullName }: RepliedMessageProps) {
-  // console.log("message", message);
+  console.log("message", message, isFromMe);
   const { userProfile } = useProfile();
 
   const isReplyFromMe = message.meta.sender + "" === userProfile.uid + "";
@@ -21,7 +22,7 @@ function RepliedMessage({ isFromMe, message, fullName }: RepliedMessageProps) {
       <div className="replymessage-block mb-2 d-flex align-items-start">
         <div className="flex-grow-1">
           <h5 className="conversation-name">
-            {isReplyFromMe ? "You" : fullName}
+            {isReplyFromMe ? "You" : fullName + "Unknown"}
           </h5>
           {message.replyOf?.text && (
             <p className="mb-0">{message.replyOf?.text}</p>

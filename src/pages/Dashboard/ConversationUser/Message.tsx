@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Typewriter from 'typewriter-effect';
+
 import {
   DropdownToggle,
   DropdownMenu,
@@ -7,9 +9,9 @@ import {
 } from "reactstrap";
 import classnames from "classnames";
 import { Link } from "react-router-dom";
-import Highlight, { defaultProps } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/nightOwl";
-import { Pre } from "./styles";
+// import Highlight, { defaultProps } from "prism-react-renderer";
+// import theme from "prism-react-renderer/themes/nightOwl";
+// import { Pre } from "./styles";
 // components
 import LightBox from "../../../components/LightBox";
 
@@ -35,7 +37,6 @@ interface MenuProps {
   onReply: () => any;
   onForward: () => void;
 }
-let senderIDcode: any = "614ecab426f59ce2863e106f"
 const Menu = ({ onDelete, onReply, onForward }: MenuProps) => {
   return (
     <UncontrolledDropdown className="align-self-start message-box-drop">
@@ -276,6 +277,7 @@ interface MessageProps {
   isChannel: boolean;
   onDeleteImage: (messageId: string | number, imageId: string | number) => void;
   isWriting: boolean;
+  isLastmsg: boolean;
 }
 const Message = ({
   message,
@@ -287,13 +289,14 @@ const Message = ({
   isChannel,
   onDeleteImage,
   isWriting,
+  isLastmsg
 }: MessageProps) => {
   // console.log("message", message);
   const { userProfile } = useProfile();
   const hasImages = message.image && message.image.length;
   const hasAttachments = message.attachments && message.attachments.length;
   const hasText = message.text;
-  const isTyping = false;
+  // const isTyping = false;
 
   const chatUserFullName = chatUserDetails.firstName
     ? `${chatUserDetails.firstName} ${chatUserDetails.lastName}`
@@ -404,14 +407,27 @@ const Message = ({
                   )}
 
                   {/* typing start */}
-                  {!isFromMe ? <p className="mb-0 ctext-content">
-                      {message.text} 
-                      </p>
+                  {!isFromMe ? 
+                  
+                  <div className="mb-0 ctext-content">
+                    {!isLastmsg ? (
+                      message.text
+                    ) : (
+                      <Typewriter
+  options={{
+    strings: message.text,
+    autoStart: true,
+    loop: false,
+    delay: 70,
+  }}
+/>
+                    )}
+                      </div>
                   : isWriting && (
-                    <p className="mb-0 ctext-content">
+                    <div className="mb-0 ctext-content">
 
 <Typing />  
-                    </p>
+                    </div>
                     
                   )
                   }

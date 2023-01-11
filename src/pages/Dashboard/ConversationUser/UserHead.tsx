@@ -7,9 +7,9 @@ import {
   DropdownMenu,
   DropdownItem,
   Input,
-  Button,
-  Alert,
-  UncontrolledTooltip,
+  // Button,
+  // Alert,
+  // UncontrolledTooltip,
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
@@ -159,27 +159,27 @@ const ProfileImage = ({
   );
 };
 
-const Search = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const toggle = () => setDropdownOpen(!dropdownOpen);
+// const Search = () => {
+//   const [dropdownOpen, setDropdownOpen] = useState(false);
+//   const toggle = () => setDropdownOpen(!dropdownOpen);
 
-  return (
-    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-      <DropdownToggle
-        color="none"
-        className="btn nav-btn dropdown-toggle"
-        type="button"
-      >
-        <i className="bx bx-search"></i>
-      </DropdownToggle>
-      <DropdownMenu className="dropdown-menu p-0 dropdown-menu-end dropdown-menu-lg">
-        <div className="search-box p-2">
-          <Input type="text" className="form-control" placeholder="Search.." />
-        </div>
-      </DropdownMenu>
-    </Dropdown>
-  );
-};
+//   return (
+//     <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+//       <DropdownToggle
+//         color="none"
+//         className="btn nav-btn dropdown-toggle"
+//         type="button"
+//       >
+//         <i className="bx bx-search"></i>
+//       </DropdownToggle>
+//       <DropdownMenu className="dropdown-menu p-0 dropdown-menu-end dropdown-menu-lg">
+//         <div className="search-box p-2">
+//           <Input type="text" className="form-control" placeholder="Search.." />
+//         </div>
+//       </DropdownMenu>
+//     </Dropdown>
+//   );
+// };
 interface MoreProps {
   onOpenAudio: () => void;
   onOpenVideo: () => void;
@@ -187,82 +187,82 @@ interface MoreProps {
   isArchive: boolean;
   onToggleArchive: () => void;
 }
-const More = ({
-  onOpenAudio,
-  onOpenVideo,
-  onDelete,
-  isArchive,
-  onToggleArchive,
-}: MoreProps) => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const toggle = () => setDropdownOpen(!dropdownOpen);
+// const More = ({
+//   onOpenAudio,
+//   onOpenVideo,
+//   onDelete,
+//   isArchive,
+//   onToggleArchive,
+// }: MoreProps) => {
+//   const [dropdownOpen, setDropdownOpen] = useState(false);
+//   const toggle = () => setDropdownOpen(!dropdownOpen);
 
-  return (
-    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-      <DropdownToggle color="none" className="btn nav-btn" type="button">
-        <i className="bx bx-dots-vertical-rounded"></i>
-      </DropdownToggle>
-      <DropdownMenu className="dropdown-menu-end">
-        <DropdownItem
-          className="d-flex justify-content-between align-items-center d-lg-none user-profile-show"
-          to="#"
-        >
-          View Profile <i className="bx bx-user text-muted"></i>
-        </DropdownItem>
-        <DropdownItem
-          className="d-flex justify-content-between align-items-center d-lg-none"
-          to="#"
-          onClick={onOpenAudio}
-        >
-          Audio <i className="bx bxs-phone-call text-muted"></i>
-        </DropdownItem>
-        <DropdownItem
-          className="d-flex justify-content-between align-items-center d-lg-none"
-          to="#"
-          onClick={onOpenVideo}
-        >
-          Video <i className="bx bx-video text-muted"></i>
-        </DropdownItem>
-        <DropdownItem
-          className="d-flex justify-content-between align-items-center"
-          to="#"
-          onClick={onToggleArchive}
-        >
-          {isArchive ? (
-            <>
-              Un-Archive <i className="bx bx-archive-out text-muted"></i>
-            </>
-          ) : (
-            <>
-              Archive <i className="bx bx-archive text-muted"></i>
-            </>
-          )}
-        </DropdownItem>
-        <DropdownItem
-          className="d-flex justify-content-between align-items-center"
-          to="#"
-        >
-          Muted <i className="bx bx-microphone-off text-muted"></i>
-        </DropdownItem>
-        <DropdownItem
-          className="d-flex justify-content-between align-items-center"
-          to="#"
-          onClick={onDelete}
-        >
-          Delete <i className="bx bx-trash text-muted"></i>
-        </DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
-  );
-};
+//   return (
+//     <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+//       <DropdownToggle color="none" className="btn nav-btn" type="button">
+//         <i className="bx bx-dots-vertical-rounded"></i>
+//       </DropdownToggle>
+//       <DropdownMenu className="dropdown-menu-end">
+//         <DropdownItem
+//           className="d-flex justify-content-between align-items-center d-lg-none user-profile-show"
+//           to="#"
+//         >
+//           View Profile <i className="bx bx-user text-muted"></i>
+//         </DropdownItem>
+//         <DropdownItem
+//           className="d-flex justify-content-between align-items-center d-lg-none"
+//           to="#"
+//           onClick={onOpenAudio}
+//         >
+//           Audio <i className="bx bxs-phone-call text-muted"></i>
+//         </DropdownItem>
+//         <DropdownItem
+//           className="d-flex justify-content-between align-items-center d-lg-none"
+//           to="#"
+//           onClick={onOpenVideo}
+//         >
+//           Video <i className="bx bx-video text-muted"></i>
+//         </DropdownItem>
+//         <DropdownItem
+//           className="d-flex justify-content-between align-items-center"
+//           to="#"
+//           onClick={onToggleArchive}
+//         >
+//           {isArchive ? (
+//             <>
+//               Un-Archive <i className="bx bx-archive-out text-muted"></i>
+//             </>
+//           ) : (
+//             <>
+//               Archive <i className="bx bx-archive text-muted"></i>
+//             </>
+//           )}
+//         </DropdownItem>
+//         <DropdownItem
+//           className="d-flex justify-content-between align-items-center"
+//           to="#"
+//         >
+//           Muted <i className="bx bx-microphone-off text-muted"></i>
+//         </DropdownItem>
+//         <DropdownItem
+//           className="d-flex justify-content-between align-items-center"
+//           to="#"
+//           onClick={onDelete}
+//         >
+//           Delete <i className="bx bx-trash text-muted"></i>
+//         </DropdownItem>
+//       </DropdownMenu>
+//     </Dropdown>
+//   );
+// };
 
 interface PinnedAlertProps {
   onOpenPinnedTab: () => void;
 }
 const PinnedAlert = ({ onOpenPinnedTab }: PinnedAlertProps) => {
-  const [visible, setVisible] = useState(true);
+  // const [visible, setVisible] = useState(true);
 
-  const onDismiss = () => setVisible(false);
+  // const onDismiss = () => setVisible(false);
 
   return (
     // <Alert
