@@ -9,14 +9,14 @@ const EndButtons = ({ onSubmit, disabled }: EndButtonsProps) => {
   return (
     <div className="chat-input-links ms-2 gap-md-1">
       <div className="links-list-item d-none d-sm-block">
-        {/* <Button
+        <Button
           color="none"
           type="button"
           className="btn btn-link text-decoration-none btn-lg waves-effect"
           id="audio-btn"
         >
           <i className="bx bx-microphone align-middle"></i>
-        </Button> */}
+        </Button>
       </div>
       <UncontrolledPopover trigger="focus" placement="top" target="audio-btn">
         <PopoverBody>

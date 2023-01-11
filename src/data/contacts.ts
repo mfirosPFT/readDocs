@@ -84,7 +84,7 @@ let contacts: ContactTypes[] =
     about: "Using code-davinci-003, most capable GPT-3 model. Can do any task the other models can do, often with higher quality, longer output and better instruction-following. Also supports inserting completions within text.",
     email: "4,000 tokens",
     location: "Up to Jun 2021",
-    status: STATUS_TYPES.ACTIVE,
+    status: STATUS_TYPES.AWAY,
     channels: [],
     media: {
       total: 0,
@@ -105,7 +105,7 @@ let contacts: ContactTypes[] =
     about: "Using code-davinci-003, most capable GPT-3 model. Can do any task the other models can do, often with higher quality, longer output and better instruction-following. Also supports inserting completions within text.",
     email: "4,000 tokens",
     location: "Up to Jun 2021",
-    status: STATUS_TYPES.ACTIVE,
+    status: STATUS_TYPES.AWAY,
     channels: [],
     media: {
       total: 0,
